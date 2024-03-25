@@ -47,12 +47,13 @@ body, a {
 
 /* Targeting the section-tagline class */
 .section-tagline {
+  color: var(--color-primary);
   font-family: var(--font-family-title);
   text-transform: var(--section-tagline-transform); /* Text transformation */
   font-weight: var(--font-weight-bold); /* Font weight */
 
 /* Revisit the section-tagline and card-category declarations and reset their color to color-primary */
-.section-tagline, .card-category {
+ .card-category {
   color: var(--color-primary);
 }
 

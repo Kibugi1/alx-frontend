@@ -77,10 +77,16 @@ a[href] {
   color: inherit; /* Inherit  from parent */
 }
 
-/* Style the visited state for the link */
-a[href]:visited {
+/* Style the visited, hover, and active states for the link */
+a[href]:visited,
+a[href]:hover,
+a[href]:active {
   text-decoration: none;
   color: inherit;
+}
+
+/* Style the visited state for the link */
+a[href]:visited {
   font-style: italic;
 }
 

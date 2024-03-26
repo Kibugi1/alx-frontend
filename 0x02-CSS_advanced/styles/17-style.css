@@ -1,0 +1,143 @@
+/* Import normalize.css */
+@import url('normalize.css');
+
+/* Custom properties */
+:root {
+  --color-primary: #d73953;
+  --color-black: #090909;
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;
+  --color-dark-grey: #353535;
+  --text-color: var(--color-black); /* Default text color */
+  --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* Font size custom properties */
+  --font-size-small: 1.2rem;
+  --font-size-medium: 1.6rem;
+  --font-size-large: 1.8rem;
+  --font-size-x-large: 2.3rem;
+  --font-size-xx-large: 4.8rem;
+  /* Font weight  properties */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  /* Line height properties */
+  --line-height-small: 1.2;
+  --line-height-base: 1.5;
+  --line-height-big: 1.8;
+  --section-header-align: center; /* horizontal align for section headers */
+  --section-tagline-transform: uppercase;
+  --section-title-margin: 0;
+  --section-title-color: var(--color-black);
+  /* padding properties */
+  --section-padding: 5rem 0;
+  --section-header-padding: 0 0 3rem;
+  --section-body-padding: 0 0 3rem;
+  --section-footer-padding: 3rem 0 0;
+  --section-footer-align: center;
+  --footer-padding: 5rem 0 1rem;
+}
+
+/* Universal box sizing rule */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Set font-family for section headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-title);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Set foreground color */
+body, a {
+  color: var(--text-color);
+}
+
+.section {
+  padding: var(--section-padding);
+}
+
+.section-header {
+  text-align: var(--section-header-align); /* Horizontal alignment */
+  padding: var(--section-header-padding)
+}
+
+.section-body {
+  padding: var(--section-body-padding);
+}
+
+.section-footer {
+  padding: var(--section-footer-padding);
+  text-align: var(--section-footer-align);
+}
+
+/* Declaration for .section-title class */
+.section-title {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-xx-large);
+  font-weight: var(--font-weight-bold);
+  margin: var(--section-title-margin);
+  color: var(--section-title-color);
+}
+
+/* Revisit the section-tagline and card-category declarations and reset their color to color-primary */
+.section-tagline, .card-category {
+  color: var(--color-primary);
+  font-family: var(--font-family-title);
+  text-transform: var(--section-tagline-transform);
+  font-weight: var(--font-weight-bold);
+}
+
+.container {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Set font-family for body */
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+}
+
+/* Style the anchor elements */
+a[href] {
+  text-decoration: none;
+  color: inherit; /* Inherit  from parent */
+}
+
+/* Style the visited, hover, and active states for the link */
+a[href]:visited,
+a[href]:hover,
+a[href]:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Style the visited state for the link */
+a[href]:visited {
+  font-style: italic;
+}
+
+/* Style the hover state for the link and decorate with underline when hovering*/
+a[href]:hover {
+  text-decoration: underline;
+}
+
+/* Style the active state for the link and sets background color*/
+a[href]:active {
+  background-color: var(--color-light-grey);
+}
+
+.footer {
+  padding: var(--footer-padding);
+}

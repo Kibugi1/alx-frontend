@@ -78,7 +78,7 @@ a {
 }
 
 /* Targeting anchor elements containing a hyperlink */
-a[href] {
+a[href]:not(.section-title) {
   text-decoration: none;
 }
 

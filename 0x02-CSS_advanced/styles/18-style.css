@@ -155,10 +155,6 @@ a[href]:active {
   margin: 0;
   padding: 0;
   text-align: center;
-}
-
-/* list to not use anything */
-.nav ul {
   list-style-type: none;
 }
 

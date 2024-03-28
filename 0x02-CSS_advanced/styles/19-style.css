@@ -1,3 +1,6 @@
+/* Import normalize.css */
+@import url('normalize.css');
+
 /* Custom properties */
 :root {
   --color-primary: #d73953;
@@ -25,6 +28,28 @@
   --section-tagline-transform: uppercase;
   --section-title-margin: 0;
   --section-title-color: var(--color-black);
+  /* padding properties */
+  --section-padding: 5rem 0;
+  --section-header-padding: 0 0 3rem;
+  --section-body-padding: 0 0 3rem;
+  --section-footer-padding: 3rem 0 0;
+  --section-footer-align: center;
+  --footer-padding: 5rem 0 1rem;
+  /* custom property for nav */
+  --nav-item-font-family: var(--font-family-title);
+  --nav-item-font-weight: var(--font-weight-bold);
+  --nav-item-font-size: var(--font-size-medium);
+  --nav-item-letter-spacing: calc(0.04 * var(--root-font-size));
+  --nav-item-display: inline-block;
+  --nav-item-margin: 0 0 calc(3 * var(--root-font-size)) 0;
+  --nav-item-link-hover: var(--color-primary);
+}
+
+/* Universal box sizing rule */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {
@@ -42,8 +67,22 @@ body, a {
   color: var(--text-color);
 }
 
+.section {
+  padding: var(--section-padding);
+}
+
 .section-header {
   text-align: var(--section-header-align); /* Horizontal alignment */
+  padding: var(--section-header-padding)
+}
+
+.section-body {
+  padding: var(--section-body-padding);
+}
+
+.section-footer {
+  padding: var(--section-footer-padding);
+  text-align: var(--section-footer-align);
 }
 
 /* Declaration for .section-title class */
@@ -63,6 +102,13 @@ body, a {
   font-weight: var(--font-weight-bold);
 }
 
+.container {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 /* Set font-family for body */
 body {
   font-family: var(--font-family-base);
@@ -72,30 +118,64 @@ body {
 }
 
 /* Style the anchor elements */
-a:link {
+a[href] {
   text-decoration: none;
   color: inherit; /* Inherit  from parent */
 }
 
 /* Style the visited, hover, and active states for the link */
-a:link:visited,
-a:link:hover,
-a:link:active {
+a[href]:visited,
+a[href]:hover,
+a[href]:active {
   text-decoration: none;
   color: inherit;
 }
 
 /* Style the visited state for the link */
-a:link:visited {
+a[href]:visited {
   font-style: italic;
 }
 
 /* Style the hover state for the link and decorate with underline when hovering*/
-a:link:hover {
+a[href]:hover {
   text-decoration: underline;
 }
 
 /* Style the active state for the link and sets background color*/
-a:link:active {
+a[href]:active {
   background-color: var(--color-light-grey);
+}
+
+.navbar-menu {
+  float: right;
+}
+
+/* nav classs styling */
+.nav {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
+}
+
+.nav .nav-item {
+  font-family: var(--nav-item-font-family);
+  font-weight: var(--nav-item-font-weight);
+  font-size: var(--nav-item-font-size);
+  letter-spacing: var(--nav-item-letter-spacing);
+  display: var(--nav-item-display);
+  margin: var(--nav-item-margin);
+}
+
+.nav .nav-link {
+  display: block;
+  padding: calc(0.5 * var(--root-element-font-size)) var(--root-element-font-size);
+}
+
+.nav .nav-link:hover {
+  color: var(--nav-item-link-hover);
+}
+
+.footer {
+  padding: var(--footer-padding);
 }

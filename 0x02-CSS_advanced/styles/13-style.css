@@ -78,16 +78,16 @@ a:link {
 }
 
 /* Style the visited state for the link */
-a:link:visited {
+a:visited {
   font-style: italic;
 }
 
 /* Style the hover state for the link and decorate with underline when hovering*/
-a:link:hover {
+a:hover {
   text-decoration: underline;
 }
 
 /* Style the active state for the link and sets background color*/
-a:link:active {
+a:active {
   background-color: var(--color-light-grey);
 }

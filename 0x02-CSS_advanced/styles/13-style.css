@@ -77,14 +77,6 @@ a:link {
   color: inherit; /* Inherit  from parent */
 }
 
-/* Style the visited, hover, and active states for the link */
-a:link:visited,
-a:link:hover,
-a:link:active {
-  text-decoration: none;
-  color: inherit;
-}
-
 /* Style the visited state for the link */
 a:link:visited {
   font-style: italic;
